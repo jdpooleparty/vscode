@@ -20,6 +20,21 @@ public class IndexWasNotFound {
         int searching = Integer.valueOf(scanner.nextLine());
 
         // Implement the search functionality here
+        // and print the result
+        int index = 0;
+        int found = -1;
+        while (index < array.length) {
+            if (array[index] == searching) {
+                System.out.println(searching + " is at index " + index + ".");
+                found += 1;
+                break;
+            }
+            index++;
+
+        }
+        if (found == -1) {
+            System.out.println(searching + " was not found.");
+        }
     }
 
 }

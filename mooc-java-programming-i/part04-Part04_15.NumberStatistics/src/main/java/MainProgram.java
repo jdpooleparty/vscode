@@ -1,16 +1,29 @@
 
 import java.util.Scanner;
+import java.lang.Math;
 
 public class MainProgram {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        // you can write test code here
-        // however, remove all unnecessary code when doing the final parts of the exercise
+        Statistics statistics = new Statistics();
+        
+        int number = scanner.nextInt();
+        while (number != -1) {
+            statistics.addNumber(number);
+            number = scanner.nextInt();
+        }
 
-        // In order for the tests to work, the objects must be created in the
-        // correct order in the main program. First the object that tracks the total
-        // sum, secondly the object that tracks the sum of even numbers, 
-        // and lastly the one that tracks the sum of odd numbers!
+        //sum all numbers
+        System.out.println("Sum: " + statistics.sum());
+
+        //sum all even numbers
+        System.out.println("Sum of even numbers: " + statistics.sumEven());
+
+        //sum all odd numbers
+        System.out.println("Sum of odd numbers: " + statistics.sumOdd());
+        
+
+
     }
 }
